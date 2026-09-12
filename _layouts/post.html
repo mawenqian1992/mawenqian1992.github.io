@@ -14,7 +14,7 @@ layout: default
     <p class="post-tags">
         标签：
         {% for tag in page.tags %}
-            <a href="{{ '/tags/' | append: tag | relative_url }}">{{ tag }}</a>
+            <a href="{{ '/tags/' | relative_url }}#tag-{{ tag | slugify }}">{{ tag }}</a>
         {% endfor %}
     </p>
     {% endif %}
