@@ -1,4 +1,9 @@
-/* 中文字体与基本阅读体验 */
+---
+---
+
+@import 'jekyll-theme-cayman';
+
+/* 中文字体 */
 
 body {
     font-family:
@@ -11,13 +16,11 @@ body {
         sans-serif;
 }
 
-/* 中文正文行距 */
+/* 中文正文阅读体验 */
 
 .main-content {
     line-height: 1.8;
 }
-
-/* 标题行距 */
 
 .main-content h1,
 .main-content h2,
