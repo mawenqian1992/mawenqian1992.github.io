@@ -8,7 +8,7 @@ permalink: /tags/
 
 {% for tag in site.tags %}
 
-<h2 id="{{ tag[0] }}">{{ tag[0] }}</h2>
+<h2 id="tag-{{ tag[0] | slugify }}">{{ tag[0] }}</h2>
 
 <ul>
     {% for post in tag[1] %}
