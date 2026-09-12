@@ -13,3 +13,29 @@ layout: default
     {{ content }}
 
 </article>
+
+<hr>
+
+<nav class="post-navigation">
+
+    <div class="previous">
+        {% if page.previous %}
+            <a href="{{ page.previous.url | relative_url }}">
+                ← 上一篇：{{ page.previous.title }}
+            </a>
+        {% endif %}
+    </div>
+
+    <div class="next">
+        {% if page.next %}
+            <a href="{{ page.next.url | relative_url }}">
+                下一篇：{{ page.next.title }} →
+            </a>
+        {% endif %}
+    </div>
+
+</nav>
+
+<p>
+    <a href="{{ '/' | relative_url }}">← 返回首页</a>
+</p>
