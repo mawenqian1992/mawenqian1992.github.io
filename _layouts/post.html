@@ -10,6 +10,15 @@ layout: default
         {{ page.date | date: "%Y-%m-%d" }}
     </p>
 
+    {% if page.tags %}
+    <p class="post-tags">
+        标签：
+        {% for tag in page.tags %}
+            <a href="{{ '/tags/' | append: tag | relative_url }}">{{ tag }}</a>
+        {% endfor %}
+    </p>
+    {% endif %}
+
     {{ content }}
 
 </article>
