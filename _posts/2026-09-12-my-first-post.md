@@ -2,6 +2,7 @@
 layout: post
 title: "我的第一篇文章"
 date: 2026-09-12
+category: 随笔
 ---
 
 这是我的第一篇文章。
