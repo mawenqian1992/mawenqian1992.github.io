@@ -33,5 +33,3 @@ order: 1
 {% endfor %}
 
 </ul>
-
-[回到首页]({{ '/' | absolute_url }})

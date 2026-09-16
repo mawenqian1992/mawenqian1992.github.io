@@ -27,5 +27,3 @@ order: 0
 </ul>
 
 {% endfor %}
-
-[回到首页]({{ '/' | absolute_url }})
