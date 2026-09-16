@@ -2,3 +2,19 @@
 ---
 
 @import 'jekyll-theme-cayman-blog';
+
+.post-taxonomy {
+  margin-top: 0.4rem;
+  font-size: 0.9rem;
+  font-weight: normal;
+  opacity: 0.8;
+
+  a {
+    color: inherit;
+    text-decoration: none;
+  }
+
+  a:hover {
+    text-decoration: underline;
+  }
+}
