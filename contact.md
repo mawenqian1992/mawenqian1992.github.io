@@ -1,11 +1,12 @@
 ---
 layout: page
-title: Contact
+title: 联系
 tagline: Create a contact form and you are good to go
+permalink: /contact.html
 ref: contact
-order: 1
+order: 4
 ---
 
-Jekyll is a great tool to create static sites but with static site, there's no backend to send your data to: that is why you need a third party service.
+mawenqian1992@gmail.com
 
-[Go to the Home Page]({{ '/' | absolute_url }})
+[回到首页]({{ '/' | absolute_url }})

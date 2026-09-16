@@ -4,7 +4,7 @@ title: 关于
 tagline: A few more words
 permalink: /about.html
 ref: about
-order: 0
+order: 3
 ---
 
 # 关于我

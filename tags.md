@@ -1,7 +1,10 @@
 ---
-layout: default
+layout: page
 title: 标签
-permalink: /tags/
+tagline: A few more words
+permalink: /tags.html
+ref: tags
+order: 2
 ---
 
 # 标签
@@ -24,3 +27,5 @@ permalink: /tags/
 </ul>
 
 {% endfor %}
+
+[回到首页]({{ '/' | absolute_url }})
