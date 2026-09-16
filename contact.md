@@ -7,6 +7,6 @@ ref: contact
 order: 4
 ---
 
-mawenqian1992@gmail.com
+<mawenqian1992@gmail.com>
 
 [回到首页]({{ '/' | absolute_url }})
