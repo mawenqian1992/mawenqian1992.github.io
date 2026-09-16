@@ -5,7 +5,7 @@
 
 .post-taxonomy {
   margin-top: 0.4rem;
-  font-size: 0.9rem;
+  font-size: 1rem;
   font-weight: normal;
   opacity: 0.8;
 
@@ -17,4 +17,8 @@
   a:hover {
     text-decoration: underline;
   }
+}
+
+.post-tags {
+  margin-left: 1.5rem;
 }
