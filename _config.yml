@@ -13,7 +13,7 @@ google_analytics:
 cayman-blog:
   date_format: "%b %-d, %Y"
 
-theme: jekyll-theme-cayman-blog
+theme: # leave it empty
 
 # social
 author: 马文谦
