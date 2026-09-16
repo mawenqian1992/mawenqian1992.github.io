@@ -1,7 +1,7 @@
 ---
 layout: page
 title: 标签
-tagline: A few more words
+tagline: Explore my writing through tags and keywords
 permalink: /tags.html
 ref: tags
 order: 2

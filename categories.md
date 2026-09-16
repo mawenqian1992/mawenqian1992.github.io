@@ -1,7 +1,7 @@
 ---
 layout: page
 title: 分类
-tagline: A few more words
+tagline: Browse my writing by topic
 permalink: /categories.html
 ref: categories
 order: 0

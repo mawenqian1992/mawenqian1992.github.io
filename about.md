@@ -1,7 +1,7 @@
 ---
 layout: page
 title: 关于
-tagline: A few more words
+tagline: A little more about me and this blog
 permalink: /about.html
 ref: about
 order: 3
@@ -23,3 +23,5 @@ order: 3
 - 其他我觉得值得留下来的东西
 
 这个网站使用 GitHub Pages 和 Jekyll 搭建。
+
+[回到首页]({{ '/' | absolute_url }})

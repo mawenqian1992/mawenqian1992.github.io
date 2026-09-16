@@ -1,7 +1,7 @@
 ---
 layout: page
 title: 归档
-tagline: A few more words
+tagline: A chronological archive of my writing
 permalink: /archive.html
 ref: archive
 order: 1

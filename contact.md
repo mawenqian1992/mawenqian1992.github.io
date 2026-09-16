@@ -1,7 +1,7 @@
 ---
 layout: page
 title: 联系
-tagline: Create a contact form and you are good to go
+tagline: Get in touch with me
 permalink: /contact.html
 ref: contact
 order: 4
