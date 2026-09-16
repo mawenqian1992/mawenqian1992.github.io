@@ -1,7 +1,10 @@
 ---
 layout: page
 title: 关于
-permalink: /about/
+tagline: A few more words
+permalink: /about.html
+ref: about
+order: 0
 ---
 
 # 关于我
@@ -20,3 +23,6 @@ permalink: /about/
 - 其他我觉得值得留下来的东西
 
 这个网站使用 GitHub Pages 和 Jekyll 搭建。
+
+
+[回到首页]({{ '/' | absolute_url }})

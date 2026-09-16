@@ -1,49 +1,33 @@
 title: 孤舟札记
-author: 马文谦
-email: mawenqian1992@gmail.com
-description: > # this means to ignore newlines until "twitter_username:"
-  我的个人博客。记录历史、社会、文学、文化与日常生活的思考，
-  也记录读书、游戏、植物，以及那些偶然产生、值得留下来的想法。
+description: Notes from a Drifting Boat
+show_downloads: false
 
-# social links
-#twitter_username: jekyllrb
-github_username:  mawenqian1992
-rss: rss
-# dribbble_username: jekyll
-# facebook_username: jekyll
-# flickr_username: jekyll
-# instagram_username: jekyll
-# linkedin_username: jekyll
-# pinterest_username: jekyll
-# youtube_username: jekyll
-# googleplus_username: +jekyll
-
-# Mastodon instances
-# mastodon:
-# - username: jekyll
-#   instance: example.com
-# - username: jekyll2
-#   instance: example.com
+baseurl: "" # change this to the subpath of your site, e.g. /blog. Leave it empty if you don't need it.
+url: "https://mawenqian1992.github.io" # change this to the base hostname & protocol for your site
 
 
-show_excerpts: true # set to true to show excerpts on the homepage
+google_analytics:
 
-# Minima date format
+# cayman-blog date format
 # refer to http://shopify.github.io/liquid/filters/date/ if you want to customize this
-minima:
+cayman-blog:
   date_format: "%b %-d, %Y"
 
-# If you want to link only specific pages in your header, uncomment
-# this and add the path to the pages in order as they should show up
-#header_pages:
-# - about.html
+theme: jekyll-theme-cayman-blog
 
-# Build settings
-theme: minima
+# social
+author: 马文谦
+image: /thumbnail-jumbo.png
+twitter:
+  username: 
 
 plugins:
- - jekyll-feed
- - jekyll-seo-tag
+  - jekyll-target-blank
+
+target-blank:
+    rel: nofollow
+
+header_page_refs: ['now', 'about', 'contact']
 
 relative_links:
   enabled: true
