@@ -281,23 +281,35 @@
         });
 
         function updateActiveHeading() {
-            var current = null;
-            var offset = 140;
+    var current = null;
+    var offset = 140;
 
-            tocLinks.forEach(function (item) {
-                if (item.heading.getBoundingClientRect().top <= offset) {
-                    current = item;
-                }
-            });
-
-            tocLinks.forEach(function (item) {
-                item.link.classList.remove("active");
-            });
-
-            if (current) {
-                current.link.classList.add("active");
-            }
+    tocLinks.forEach(function (item) {
+        if (item.heading.getBoundingClientRect().top <= offset) {
+            current = item;
         }
+    });
+
+    tocLinks.forEach(function (item) {
+        item.link.classList.remove("active");
+    });
+
+    if (current) {
+        current.link.classList.add("active");
+
+        var linkRect = current.link.getBoundingClientRect();
+        var tocRect = toc.getBoundingClientRect();
+
+        if (linkRect.top < tocRect.top + 40 ||
+            linkRect.bottom > tocRect.bottom - 40) {
+
+            current.link.scrollIntoView({
+                behavior: "smooth",
+                block: "center"
+            });
+        }
+    }
+}
 
         window.addEventListener("scroll", updateActiveHeading);
         updateActiveHeading();
