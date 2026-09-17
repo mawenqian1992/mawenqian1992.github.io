@@ -9,21 +9,25 @@ order: 0
 
 # 分类
 
+<div class="category-grid">
+
 {% for category in site.categories %}
 
-## {{ category[0] }}
+<div class="category-item">
+
+<h2>{{ category[0] }}</h2>
 
 <ul>
-    {% for post in category[1] %}
+    {% for post in category[1] limit:3 %}
     <li>
-        <a href="{{ post.url | relative_url }}">
-            {{ post.title }}
-        </a>
-        <small>
-            {{ post.date | date: "%Y-%m-%d" }}
-        </small>
+        <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
+        <small>{{ post.date | date: "%Y-%m-%d" }}</small>
     </li>
     {% endfor %}
 </ul>
 
+</div>
+
 {% endfor %}
+
+</div>

@@ -22,3 +22,33 @@
 .post-tags {
   margin-left: 1.5rem;
 }
+
+.category-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem 3rem;
+}
+
+.category-item h2 {
+  margin-top: 0;
+  margin-bottom: 0.8rem;
+}
+
+.category-item ul {
+  margin-bottom: 0;
+}
+
+.category-item li {
+  margin-bottom: 0.5rem;
+}
+
+.category-item small {
+  margin-left: 0.5rem;
+  opacity: 0.6;
+}
+
+@media screen and (max-width: 42em) {
+  .category-grid {
+    grid-template-columns: 1fr;
+  }
+}
