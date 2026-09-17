@@ -87,8 +87,11 @@
 
 .content-with-sidebar {
   display: grid;
-  grid-template-columns: minmax(0, 1fr) 14rem;
+  grid-template-columns: 12rem minmax(0, 64rem) 12rem;
   gap: 3rem;
+  width: 100%;
+  max-width: 96rem;
+  margin: 0 auto;
 }
 
 .content-area {
@@ -96,6 +99,17 @@
 }
 
 .sidebar {
+  padding-top: 0.5rem;
+}
+
+.sidebar-left {
+  text-align: right;
+  border-right: 1px solid #e5e5e5;
+  padding-right: 1.5rem;
+}
+
+.sidebar-right {
+  text-align: left;
   border-left: 1px solid #e5e5e5;
   padding-left: 1.5rem;
 }
@@ -128,15 +142,32 @@
   text-decoration: underline;
 }
 
+@media screen and (max-width: 100rem) {
+  .content-with-sidebar {
+    grid-template-columns: 10rem minmax(0, 1fr) 10rem;
+    gap: 2rem;
+  }
+}
+
 @media screen and (max-width: 64em) {
   .content-with-sidebar {
-    grid-template-columns: 1fr;
+    display: block;
   }
 
-  .sidebar {
-    border-left: none;
-    border-top: 1px solid #e5e5e5;
-    padding-left: 0;
+  .sidebar-left,
+  .sidebar-right {
+    border: none;
+    padding: 0;
+    text-align: left;
+  }
+
+  .sidebar-left {
+    display: none;
+  }
+
+  .sidebar-right {
+    margin-top: 3rem;
     padding-top: 1.5rem;
+    border-top: 1px solid #e5e5e5;
   }
 }

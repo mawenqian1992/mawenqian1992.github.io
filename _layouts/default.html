@@ -109,56 +109,65 @@
             
             <div class="content-with-sidebar">
 
-        <main class="content-area">
-            {{ content }}
-        </main>
+    {% if page.layout == 'post' %}
+    <aside class="sidebar sidebar-left">
+        <div class="sidebar-section">
+            <h3>目录</h3>
+            <ul id="toc"></ul>
+        </div>
+    </aside>
+    {% endif %}
 
-        <aside class="sidebar">
+    <main class="content-area">
+        {{ content }}
+    </main>
 
-            <div class="sidebar-section">
-                <h3>分类</h3>
-                <ul>
-                    {% for category in site.categories %}
-                    <li>
-                        <a href="{{ "/categories/" | append: category[0] | relative_url }}">
-                            {{ category[0] }}
-                        </a>
-                    </li>
-                    {% endfor %}
-                </ul>
-            </div>
+    <aside class="sidebar sidebar-right">
 
-            <div class="sidebar-section">
-                <h3>标签</h3>
-                <ul>
-                    {% assign all_tags = site.tags | sort %}
-                    {% for tag in all_tags %}
-                    <li>
-                        <a href="{{ "/tags/" | append: tag[0] | relative_url }}">
-                            {{ tag[0] }}
-                        </a>
-                    </li>
-                    {% endfor %}
-                </ul>
-            </div>
+        <div class="sidebar-section">
+            <h3>分类</h3>
+            <ul>
+                {% for category in site.categories %}
+                <li>
+                    <a href="{{ "/categories/" | append: category[0] | relative_url }}">
+                        {{ category[0] }}
+                    </a>
+                </li>
+                {% endfor %}
+            </ul>
+        </div>
 
-            <div class="sidebar-section">
-                <h3>归档</h3>
-                <ul>
-                    {% assign archive_years = site.posts | group_by_exp: "post", "post.date | date: '%Y'" %}
-                    {% for year in archive_years %}
-                    <li>
-                        <a href="{{ "/archive/" | append: year.name | append: "/" | relative_url }}">
-                            {{ year.name }}
-                        </a>
-                    </li>
-                    {% endfor %}
-                </ul>
-            </div>
+        <div class="sidebar-section">
+            <h3>标签</h3>
+            <ul>
+                {% assign all_tags = site.tags | sort %}
+                {% for tag in all_tags %}
+                <li>
+                    <a href="{{ "/tags/" | append: tag[0] | relative_url }}">
+                        {{ tag[0] }}
+                    </a>
+                </li>
+                {% endfor %}
+            </ul>
+        </div>
 
-        </aside>
+        <div class="sidebar-section">
+            <h3>归档</h3>
+            <ul>
+                {% assign archive_years = site.posts | group_by_exp: "post", "post.date | date: '%Y'" %}
+                {% for year in archive_years %}
+                <li>
+                    <a href="{{ "/archive/" | append: year.name | append: "/" | relative_url }}">
+                        {{ year.name }}
+                    </a>
+                </li>
+                {% endfor %}
+            </ul>
+        </div>
 
-    </div>
+    </aside>
+
+</div>
             
             <footer class="site-footer">
                 <!-- SVG icons from https://iconmonstr.com -->
