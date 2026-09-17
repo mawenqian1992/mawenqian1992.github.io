@@ -101,7 +101,7 @@
 }
 
 .content-with-sidebar.has-toc {
-  grid-template-columns: 7rem minmax(0, 64rem) 7rem;
+  grid-template-columns: 11rem minmax(0, 64rem) 7rem;
 }
 
 .content-with-sidebar.no-toc {
@@ -118,9 +118,9 @@
 }
 
 .sidebar-left {
-  text-align: right;
+  text-align: left;
   border-right: 1px solid #e5e5e5;
-  padding-right: 1rem;
+  padding-right: 1.2rem;
 }
 
 .sidebar-right {
@@ -196,8 +196,15 @@
   line-height: 1.4;
 }
 
+#toc a {
+  display: block;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
 #toc .toc-h3 {
-  padding-right: 0.8rem;
+  padding-left: 0.8rem;
   font-size: 0.8rem;
   opacity: 0.8;
 }
