@@ -240,30 +240,67 @@
 
         if (!toc || !article) return;
 
-        var headings = article.querySelectorAll("h2, h3");
+        var headings = article.querySelectorAll("h2, h3, h4, h5, h6");
+        var tocLinks = [];
 
-        headings.forEach(function (heading) {
+        headings.forEach(function (heading, index) {
             if (!heading.id) {
-                heading.id = heading.textContent
+                var baseId = heading.textContent
                     .trim()
                     .toLowerCase()
                     .replace(/\s+/g, "-")
                     .replace(/[^\w\u4e00-\u9fa5-]/g, "");
+
+                heading.id = baseId || "heading";
+
+                var originalId = heading.id;
+                var count = 1;
+
+                while (document.querySelectorAll("#" + CSS.escape(heading.id)).length > 1) {
+                    heading.id = originalId + "-" + count;
+                    count++;
+                }
             }
 
             var li = document.createElement("li");
             var a = document.createElement("a");
 
+            var level = parseInt(heading.tagName.substring(1));
+
             a.href = "#" + heading.id;
             a.textContent = heading.textContent;
-
-            if (heading.tagName === "H3") {
-                a.className = "toc-h3";
-            }
+            a.className = "toc-level-" + level;
 
             li.appendChild(a);
             toc.appendChild(li);
+
+            tocLinks.push({
+                heading: heading,
+                link: a
+            });
         });
+
+        function updateActiveHeading() {
+            var current = null;
+            var offset = 140;
+
+            tocLinks.forEach(function (item) {
+                if (item.heading.getBoundingClientRect().top <= offset) {
+                    current = item;
+                }
+            });
+
+            tocLinks.forEach(function (item) {
+                item.link.classList.remove("active");
+            });
+
+            if (current) {
+                current.link.classList.add("active");
+            }
+        }
+
+        window.addEventListener("scroll", updateActiveHeading);
+        updateActiveHeading();
     });
     {% endif %}
 </script>
