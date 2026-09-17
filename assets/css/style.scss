@@ -26,25 +26,33 @@
 .category-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 2rem 3rem;
+  gap: 1.5rem 3rem;
 }
 
 .category-item h2 {
   margin-top: 0;
-  margin-bottom: 0.8rem;
-}
-
-.category-item ul {
-  margin-bottom: 0;
-}
-
-.category-item li {
   margin-bottom: 0.5rem;
 }
 
-.category-item small {
-  margin-left: 0.5rem;
+.category-post {
+  display: flex;
+  align-items: baseline;
+  margin-bottom: 0.25rem;
+  line-height: 1.5;
+}
+
+.category-post a {
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.category-post small {
+  flex-shrink: 0;
+  margin-left: 0.6rem;
   opacity: 0.6;
+  font-size: 0.8rem;
 }
 
 @media screen and (max-width: 42em) {
