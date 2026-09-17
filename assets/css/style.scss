@@ -87,10 +87,10 @@
 
 .content-with-sidebar {
   display: grid;
-  grid-template-columns: 12rem minmax(0, 64rem) 12rem;
-  gap: 3rem;
+  grid-template-columns: 9rem minmax(0, 64rem) 9rem;
+  gap: 2rem;
   width: 100%;
-  max-width: 96rem;
+  max-width: 88rem;
   margin: 0 auto;
 }
 
@@ -142,10 +142,10 @@
   text-decoration: underline;
 }
 
-@media screen and (max-width: 100rem) {
+@media screen and (max-width: 92rem) {
   .content-with-sidebar {
-    grid-template-columns: 10rem minmax(0, 1fr) 10rem;
-    gap: 2rem;
+    grid-template-columns: 8rem minmax(0, 1fr) 8rem;
+    gap: 1.5rem;
   }
 }
 
