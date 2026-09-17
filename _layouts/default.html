@@ -50,7 +50,7 @@
         
         <link rel="stylesheet" href="{{ '/assets/css/style.css?v=' | append: site.github.build_revision | absolute_url }}">
     </head>
-    <body>
+    <body id="top">
         
         {% include site-header.html %}
         
@@ -124,8 +124,13 @@
 
     <aside class="sidebar sidebar-right">
 
-        <div class="sidebar-section">
-            <h3>分类</h3>
+    <div class="sidebar-section sidebar-navigation">
+        <a href="{{ "/" | relative_url }}">返回首页</a>
+        <a href="#top">回到顶部</a>
+    </div>
+
+    <div class="sidebar-section">
+        <h3>分类</h3>
             <ul>
                 {% for category in site.categories %}
                 <li>

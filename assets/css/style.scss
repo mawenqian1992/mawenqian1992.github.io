@@ -141,6 +141,22 @@
   padding-left: 1rem;
 }
 
+.sidebar-navigation {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid #e5e5e5;
+}
+
+.sidebar-navigation a {
+  text-decoration: none;
+}
+
+.sidebar-navigation a:hover {
+  text-decoration: underline;
+}
+
 .sidebar-section {
   margin-bottom: 2rem;
 }
@@ -151,13 +167,15 @@
 }
 
 .sidebar-section ul {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.25rem 0.8rem;
   margin: 0;
   padding: 0;
   list-style: none;
 }
 
 .sidebar-section li {
-  margin-bottom: 0.3rem;
   line-height: 1.5;
 }
 
