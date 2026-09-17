@@ -184,3 +184,20 @@
     text-align: left;
   }
 }
+
+/* ===== 文章目录 ===== */
+
+#toc {
+  font-size: 0.85rem;
+}
+
+#toc li {
+  margin-bottom: 0.35rem;
+  line-height: 1.4;
+}
+
+#toc .toc-h3 {
+  padding-right: 0.8rem;
+  font-size: 0.8rem;
+  opacity: 0.8;
+}

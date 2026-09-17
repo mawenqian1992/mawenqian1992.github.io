@@ -231,6 +231,42 @@
                 return false;
             }  
         </script>
+
+        <script>
+    {% if page.layout == 'post' %}
+    document.addEventListener("DOMContentLoaded", function () {
+        var toc = document.getElementById("toc");
+        var article = document.querySelector(".content-area");
+
+        if (!toc || !article) return;
+
+        var headings = article.querySelectorAll("h2, h3");
+
+        headings.forEach(function (heading) {
+            if (!heading.id) {
+                heading.id = heading.textContent
+                    .trim()
+                    .toLowerCase()
+                    .replace(/\s+/g, "-")
+                    .replace(/[^\w\u4e00-\u9fa5-]/g, "");
+            }
+
+            var li = document.createElement("li");
+            var a = document.createElement("a");
+
+            a.href = "#" + heading.id;
+            a.textContent = heading.textContent;
+
+            if (heading.tagName === "H3") {
+                a.className = "toc-h3";
+            }
+
+            li.appendChild(a);
+            toc.appendChild(li);
+        });
+    });
+    {% endif %}
+</script>
         
     </body>
     </html>
