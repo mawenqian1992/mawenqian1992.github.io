@@ -107,7 +107,7 @@
         
         <section class="main-content">
             
-            <div class="content-with-sidebar">
+            <div class="content-with-sidebar {% if page.layout == 'post' %}has-toc{% else %}no-toc{% endif %}">
 
     {% if page.layout == 'post' %}
     <aside class="sidebar sidebar-left">

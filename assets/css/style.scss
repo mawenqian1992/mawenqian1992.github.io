@@ -85,13 +85,28 @@
   white-space: nowrap;
 }
 
+/* ===== 侧边栏布局 ===== */
+
+.main-content {
+  max-width: 88rem;
+  padding-left: 2rem;
+  padding-right: 2rem;
+}
+
 .content-with-sidebar {
   display: grid;
-  grid-template-columns: 9rem minmax(0, 64rem) 9rem;
-  gap: 2rem;
+  gap: 1.5rem;
   width: 100%;
-  max-width: 88rem;
   margin: 0 auto;
+}
+
+.content-with-sidebar.has-toc {
+  grid-template-columns: 7rem minmax(0, 64rem) 7rem;
+}
+
+.content-with-sidebar.no-toc {
+  grid-template-columns: minmax(0, 64rem) 7rem;
+  justify-content: center;
 }
 
 .content-area {
@@ -105,13 +120,13 @@
 .sidebar-left {
   text-align: right;
   border-right: 1px solid #e5e5e5;
-  padding-right: 1.5rem;
+  padding-right: 1rem;
 }
 
 .sidebar-right {
   text-align: left;
   border-left: 1px solid #e5e5e5;
-  padding-left: 1.5rem;
+  padding-left: 1rem;
 }
 
 .sidebar-section {
@@ -142,23 +157,18 @@
   text-decoration: underline;
 }
 
-@media screen and (max-width: 92rem) {
-  .content-with-sidebar {
-    grid-template-columns: 8rem minmax(0, 1fr) 8rem;
-    gap: 1.5rem;
-  }
-}
+
+/* ===== 平板和手机 ===== */
 
 @media screen and (max-width: 64em) {
-  .content-with-sidebar {
-    display: block;
+  .main-content {
+    max-width: 64rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
   }
 
-  .sidebar-left,
-  .sidebar-right {
-    border: none;
-    padding: 0;
-    text-align: left;
+  .content-with-sidebar {
+    display: block;
   }
 
   .sidebar-left {
@@ -168,6 +178,9 @@
   .sidebar-right {
     margin-top: 3rem;
     padding-top: 1.5rem;
+    padding-left: 0;
+    border-left: none;
     border-top: 1px solid #e5e5e5;
+    text-align: left;
   }
 }
