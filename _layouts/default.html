@@ -283,6 +283,7 @@
         function updateActiveHeading() {
     var current = null;
     var offset = 140;
+    var sidebar = document.querySelector(".sidebar-left");
 
     tocLinks.forEach(function (item) {
         if (item.heading.getBoundingClientRect().top <= offset) {
@@ -294,19 +295,18 @@
         item.link.classList.remove("active");
     });
 
-    if (current) {
+    if (current && sidebar) {
         current.link.classList.add("active");
 
         var linkRect = current.link.getBoundingClientRect();
-        var tocRect = toc.getBoundingClientRect();
+        var sidebarRect = sidebar.getBoundingClientRect();
 
-        if (linkRect.top < tocRect.top + 40 ||
-            linkRect.bottom > tocRect.bottom - 40) {
+        if (linkRect.top < sidebarRect.top + 40) {
+            sidebar.scrollTop -= sidebarRect.top + 40 - linkRect.top;
+        }
 
-            current.link.scrollIntoView({
-                behavior: "smooth",
-                block: "center"
-            });
+        if (linkRect.bottom > sidebarRect.bottom - 40) {
+            sidebar.scrollTop += linkRect.bottom - (sidebarRect.bottom - 40);
         }
     }
 }
