@@ -7,7 +7,7 @@ ref: tags
 order: 2
 ---
 
-<div class="tag-list">
+<div class="tag-grid">
 
 {% assign all_tags = site.tags | sort %}
 

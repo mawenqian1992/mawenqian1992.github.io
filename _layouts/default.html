@@ -88,10 +88,13 @@
             </h2>
 
             <div class="post-taxonomy">
+                <span class="post-categorys">
+                分类：
                 {% assign category_slug = page.category | slugify %}
                     <a href="{{ "/categories.html#category-" | append: category_slug | relative_url }}">
-                    {{ page.category }}
+                        {{ page.category }}
                     </a>
+                </span>
 
                 {% if page.tags %}
                     <span class="post-tags">

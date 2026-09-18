@@ -294,22 +294,26 @@
   opacity: 1;
 }
 
-.tag-list {
+.tag-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem 3rem;
   margin-top: 1.5rem;
 }
 
 .tag-item {
-  margin-bottom: 2.5rem;
+  margin-bottom: 1.2rem;
 }
 
 .tag-item h2 {
-  margin-bottom: 0.8rem;
+  margin-top: 0;
+  margin-bottom: 0.5rem;
 }
 
 .tag-post {
   display: flex;
   align-items: baseline;
-  margin-bottom: 0.35rem;
+  margin-bottom: 0.25rem;
   line-height: 1.5;
 }
 
@@ -324,4 +328,10 @@
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
+}
+
+@media screen and (max-width: 42em) {
+  .tag-grid {
+    grid-template-columns: 1fr;
+  }
 }
