@@ -7,8 +7,6 @@ layout: default
     {{ content }}
   </div>
 
-<p class="back-home"> <a href="{{ "/" | absolute_url }}">回到首页</a> </p>
-
   {% if site.disqus.shortname %}
     {% include disqus_comments.html %}
   {% endif %}
