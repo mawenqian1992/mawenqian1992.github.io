@@ -147,8 +147,7 @@
 
 .sidebar-navigation {
   display: flex;
-  flex-direction: column;
-  gap: 0.4rem;
+  gap: 1rem;
   padding-bottom: 1rem;
   border-bottom: 1px solid #e5e5e5;
 }
@@ -287,4 +286,36 @@
 #toc a.active {
   font-weight: 600;
   opacity: 1;
+}
+
+.tag-list {
+  margin-top: 1.5rem;
+}
+
+.tag-item {
+  margin-bottom: 2.5rem;
+}
+
+.tag-item h2 {
+  margin-bottom: 0.8rem;
+}
+
+.tag-post {
+  display: flex;
+  align-items: baseline;
+  margin-bottom: 0.35rem;
+  line-height: 1.5;
+}
+
+.tag-date {
+  flex: 0 0 6.5rem;
+  font-size: 0.9rem;
+  opacity: 0.6;
+}
+
+.tag-post a {
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }

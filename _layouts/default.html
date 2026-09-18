@@ -141,18 +141,18 @@
         </div>
 
         <div class="sidebar-section sidebar-tags">
-            <h3>标签</h3>
-            <ul>
-                {% assign all_tags = site.tags | sort %}
-                {% for tag in all_tags %}
-                <li>
-                    <a href="{{ "/tags/" | append: tag[0] | relative_url }}">
-                        {{ tag[0] }}
-                    </a>
-                </li>
-                {% endfor %}
-            </ul>
-        </div>
+    <h3>标签</h3>
+    <ul>
+        {% assign all_tags = site.tags | sort %}
+        {% for tag in all_tags %}
+        <li>
+            <a href="{{ "/tags.html#tag-" | append: tag[0] | slugify | relative_url }}">
+                {{ tag[0] }}
+            </a>
+        </li>
+        {% endfor %}
+    </ul>
+</div>
 
         <div class="sidebar-section">
             <h3>归档</h3>
