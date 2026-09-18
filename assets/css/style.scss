@@ -29,8 +29,12 @@
 
 .category-grid {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 1.5rem 3rem;
+}
+
+.category-item {
+  min-width: 0;
 }
 
 .category-item h2 {
@@ -300,13 +304,13 @@
 
 .tag-grid {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 1.5rem 3rem;
   margin-top: 1.5rem;
 }
 
 .tag-item {
-  margin-bottom: 1.2rem;
+  min-width: 0;
 }
 
 .tag-item h2 {
