@@ -4,7 +4,7 @@ date: 2026-09-18
 filename: 2026-09-18-blog-building-record
 category: 教程
 tags:
-  - GithubPages
+  - GitHubPages
   - 教程
 share: true
 ---
