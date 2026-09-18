@@ -145,11 +145,12 @@
     <ul>
         {% assign all_tags = site.tags | sort %}
         {% for tag in all_tags %}
-        <li>
-            <a href="{{ "/tags.html#tag-" | append: tag[0] | slugify | relative_url }}">
-                {{ tag[0] }}
-            </a>
-        </li>
+            {% assign tag_slug = tag[0] | slugify %}
+            <li>
+                <a href="{{ "/tags.html#tag-" | append: tag_slug | relative_url }}">
+                    {{ tag[0] }}
+                </a>
+            </li>
         {% endfor %}
     </ul>
 </div>
