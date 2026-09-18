@@ -88,7 +88,7 @@
 /* ===== 侧边栏布局 ===== */
 
 .main-content {
-  max-width: 88rem;
+  max-width: 96rem;
   padding-left: 2rem;
   padding-right: 2rem;
 }
@@ -101,11 +101,11 @@
 }
 
 .content-with-sidebar.has-toc {
-  grid-template-columns: 11rem minmax(0, 64rem) 7rem;
+  grid-template-columns: 12rem minmax(0, 68rem) 10rem;
 }
 
 .content-with-sidebar.no-toc {
-  grid-template-columns: minmax(0, 64rem) 7rem;
+  grid-template-columns: minmax(0, 68rem) 10rem;
   justify-content: center;
 }
 
@@ -139,6 +139,10 @@
   text-align: left;
   border-left: 1px solid #e5e5e5;
   padding-left: 1rem;
+
+  position: sticky;
+  top: 1.5rem;
+  align-self: start;
 }
 
 .sidebar-navigation {
@@ -185,6 +189,18 @@
 
 .sidebar-section a:hover {
   text-decoration: underline;
+}
+
+.sidebar-navigation {
+  font-size: 0.9rem;
+}
+
+.sidebar-section:nth-child(2) li {
+  font-size: 0.85rem;
+}
+
+.sidebar-section:nth-child(3) li {
+  font-size: 0.75rem;
 }
 
 
