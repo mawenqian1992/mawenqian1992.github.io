@@ -195,12 +195,12 @@
   font-size: 0.9rem;
 }
 
-.sidebar-section:nth-child(2) li {
-  font-size: 0.85rem;
+.sidebar-categories li {
+  font-size: 0.9rem;
 }
 
-.sidebar-section:nth-child(3) li {
-  font-size: 0.75rem;
+.sidebar-tags li {
+  font-size: 0.8rem;
 }
 
 
@@ -238,15 +238,16 @@
 }
 
 #toc li {
-  margin-bottom: 0.35rem;
+  display: block;
+  width: 100%;
+  margin-bottom: 0.45rem;
   line-height: 1.4;
 }
 
 #toc a {
   display: block;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
+  white-space: normal;
+  overflow-wrap: anywhere;
   text-decoration: none;
   transition: opacity 0.15s ease;
 }
@@ -257,6 +258,7 @@
 
 #toc .toc-level-2 {
   padding-left: 0;
+  font-size: 0.85rem;
 }
 
 #toc .toc-level-3 {
