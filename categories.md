@@ -13,7 +13,7 @@ order: 0
 
 <div class="category-item">
 
-<h2>{{ category[0] }}</h2>
+<h2 id="category-{{ category[0] | slugify }}">{{ category[0] }}</h2>
 
 <div class="category-posts">
 

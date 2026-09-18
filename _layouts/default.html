@@ -88,9 +88,10 @@
             </h2>
 
             <div class="post-taxonomy">
-                {% if page.category %}
-                    <span>分类：{{ page.category }}</span>
-                {% endif %}
+                {% assign category_slug = page.category | slugify %}
+                    <a href="{{ "/categories.html#category-" | append: category_slug | relative_url }}">
+                    {{ page.category }}
+                    </a>
 
                 {% if page.tags %}
                     <span class="post-tags">
@@ -129,17 +130,18 @@
     </div>
 
     <div class="sidebar-section sidebar-categories">
-        <h3>分类</h3>
-            <ul>
-                {% for category in site.categories %}
-                <li>
-                    <a href="{{ "/categories/" | append: category[0] | relative_url }}">
-                        {{ category[0] }}
-                    </a>
-                </li>
-                {% endfor %}
-            </ul>
-        </div>
+    <h3>分类</h3>
+    <ul>
+        {% for category in site.categories %}
+            {% assign category_slug = category[0] | slugify %}
+            <li>
+                <a href="{{ "/categories.html#category-" | append: category_slug | relative_url }}">
+                    {{ category[0] }}
+                </a>
+            </li>
+        {% endfor %}
+    </ul>
+</div>
 
         <div class="sidebar-section sidebar-tags">
     <h3>标签</h3>
