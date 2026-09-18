@@ -4,7 +4,7 @@ date: 2026-09-11
 filename: 2026-09-11-80s-political-reform
 category: 历史
 tags:
-  - 新中国历史
+  - 新中国史
   - 学潮
   - 改革开放
 share: true

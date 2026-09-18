@@ -55,6 +55,12 @@
   font-size: 0.8rem;
 }
 
+.category-date {
+  flex: 0 0 6.5rem;
+  font-size: 0.9rem;
+  opacity: 0.6;
+}
+
 @media screen and (max-width: 42em) {
   .category-grid {
     grid-template-columns: 1fr;
