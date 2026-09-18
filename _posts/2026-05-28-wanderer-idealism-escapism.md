@@ -2,11 +2,12 @@
 title: 浪子的理想与逃避
 date: 2026-05-28
 filename: 2026-05-28-wanderer-idealism-escapism
-category: 文艺评论
+category: 音乐
 tags:
   - 浪子
-  - 老歌
+  - 经典歌曲
   - 王杰
+  - 乐评
 share: true
 ---
 一个不相信爱情的浪子为什么偏要寻找真爱？王杰在《谁明浪子心》里唱道：

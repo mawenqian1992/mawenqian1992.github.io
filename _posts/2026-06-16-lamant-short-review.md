@@ -2,7 +2,7 @@
 title: 《情人》短评
 date: 2026-06-16
 filename: 2026-06-16-lamant-short-review
-category: 书评
+category: 文学
 tags:
   - 杜拉斯
   - 文学性
