@@ -1,5 +1,5 @@
 ---
-title: 未命名
+title: 《解忧杂货店》短评
 date: 2026-09-19
 filename: 2026-09-19-namiya-store-short-review
 category: 文学
