@@ -36,8 +36,8 @@ order: 2
 
 {% endfor %}
 
-<div class="private-entry">
-  <a href="{{ '/private/' | relative_url }}">密文</a>
+<div class="tag-item">
+  <h2><a href="{{ '/private/' | relative_url }}">密文</a></h2>
 </div>
 
 </div>
