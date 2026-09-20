@@ -36,4 +36,8 @@ order: 2
 
 {% endfor %}
 
+<div class="private-entry">
+  <a href="{{ '/private/' | relative_url }}">密文</a>
+</div>
+
 </div>
