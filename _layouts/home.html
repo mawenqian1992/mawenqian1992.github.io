@@ -17,7 +17,19 @@ layout: default
           <a class="post-link" href="{{ post.url | absolute_url }}" title="{{ post.title }}">{{ post.title | escape }}</a>
         </h2>
 
-        {{ post.excerpt | strip_html | strip_newlines | truncatewords: 30 }}
+        {% assign paragraphs = post.content | markdownify | split: '</p>' %}
+        {% assign excerpt = '' %}
+
+        {% for paragraph in paragraphs %}
+            {% unless paragraph contains '<h1' or paragraph contains '<h2' or paragraph contains '<h3' or paragraph contains '<blockquote' %}
+        {% assign excerpt = paragraph | strip_html | strip_newlines | strip %}
+            {% if excerpt != '' %}
+        {% break %}
+            {% endif %}
+        {% endunless %}
+        {% endfor %}
+
+      {{ excerpt | truncatewords: 30 }}
 
       </li>
     {% endfor %}
