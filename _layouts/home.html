@@ -17,7 +17,8 @@ layout: default
           <a class="post-link" href="{{ post.url | absolute_url }}" title="{{ post.title }}">{{ post.title | escape }}</a>
         </h2>
 
-        {{ post.excerpt | markdownify | strip_html | replace: "\n", " " | strip_newlines | truncatewords: 30 }}
+        {% assign excerpt = post.content | markdownify | strip_html | normalize_whitespace %}
+        {{ excerpt | truncatewords: 30 }}
 
       </li>
     {% endfor %}
