@@ -1,10 +1,10 @@
 ---
-title: 刹那之美——《失乐园》书评
+title: 刹那之美——《失乐园》读后感
 date: 2026-10-23
 filename: 2026-10-23-shitsurakuen-reading-and-reflection
 category: 文学
 tags:
-  - 书评
+  - 读后感
   - 渡边淳一
   - 日本文学
 share: true
