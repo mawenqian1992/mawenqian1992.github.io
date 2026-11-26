@@ -1,10 +1,10 @@
 ---
-title: 对不可言喻之物的追求——《月亮与六便士》书评
+title: 对不可言喻之物的追求——《月亮与六便士》读后感
 date: 2026-01-01
 filename: 2026-01-01-the-moon-sixpence-reading-and-reflection
 category: 文学
 tags:
-  - 书评
+  - 读后感
   - 毛姆
   - 高更
   - 英国文学
